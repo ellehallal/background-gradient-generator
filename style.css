@@ -1,40 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 body{
-  text-align: center;
   height: 100vh;
   width: 50vw;
   display: flex;
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
 }
 
-body > div {
+body > div, header, footer {
   margin: 1% 0;
 }
 
-div{
+div, header, footer{
   background-color: #FFF;
   border-radius: 10px;
-  padding: 2%;
+  padding: 1%;
 }
+
 
 .container{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+input[type="color"]{
+  height: 4rem;
+  width: 4rem;
+}
+
 img {
   width: 35px;
   height: auto;
   cursor: pointer;
   border-radius: 100px;
   margin: 0 1vw;
+  background-color: #F6C503;
+
 }
 
 img:hover{
-  background-color: #F6C503;
-}
-
-img:focus{
-  background-color: #c0c0c0;
+  background-color: #EE6E73;
 }
 
 textarea{
@@ -49,4 +57,9 @@ textarea{
 #startvalue, #endvalue{
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.fab {
+  color: #000000;
+  margin: 0 .5%;
 }
