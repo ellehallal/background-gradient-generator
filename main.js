@@ -1,3 +1,4 @@
+let bodybg = document.getElementById("bodybg");
 const colourstart = document.getElementById("colour-start");
 const colourend = document.getElementById("colour-end");
 let startvalue = document.getElementById("startvalue");
@@ -12,7 +13,7 @@ const bottomleft = document.getElementById("bottom-left");
 const left = document.getElementById("left");
 const topleft = document.getElementById("top-left");
 
-let selection = "";
+let direction = "";
 
 //placeholders
 const button = document.getElementById("button");
@@ -38,6 +39,9 @@ function topclick(){
   let pdirection = document.getElementById("pdirection")
   pdirection.innerHTML = "Selected gradient direction: to top";
   selection = "top";
+  console.log(selection)
 }
 
 ttop.addEventListener("click", topclick);
+
+bodybg.style.backgroundImage = 'linear-gradient(to top, #C0c0c0, #a8eb12)';
