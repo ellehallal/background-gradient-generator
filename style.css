@@ -43,6 +43,10 @@ textarea{
   width: 100%;
   height: 100%;
   font-size: inherit;
-  font-weight: 600;
   text-align: center;
+}
+
+#startvalue, #endvalue{
+  font-size: 1.2rem;
+  font-weight: bold;
 }

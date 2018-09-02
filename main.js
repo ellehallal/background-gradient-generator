@@ -26,11 +26,11 @@ let usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value 
 
 // colour picker functions
 function pcolourstart() {
-  startvalue.innerHTML = colourstart.value;
+  startvalue.innerHTML = colourstart.value.toUpperCase();
 }
 
 function pcolourend() {
-  endvalue.innerHTML = colourend.value;
+  endvalue.innerHTML = colourend.value.toUpperCase();
 }
 
 // colour picker event listeners
