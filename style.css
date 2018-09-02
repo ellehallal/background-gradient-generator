@@ -1,4 +1,15 @@
 img {
   width: 50px;
   height: auto;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 0 1vw;
+}
+
+img:hover{
+  background-color: #F6C503;
+}
+
+img:focus{
+  background-color: #c0c0c0;
 }

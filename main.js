@@ -1,6 +1,7 @@
 const colourstart = document.getElementById("colour-start");
 const colourend = document.getElementById("colour-end");
-// const colourstartvalue = colourstart.value
+let startvalue = document.getElementById("startvalue");
+let endvalue = document.getElementById("endvalue");
 // const colourendvalue = colourstart.end
 
 const ttop = document.getElementById("top");
@@ -17,13 +18,13 @@ let gradientcode = document.getElementById("gradient-code")
 gradientcode.value = "working?"
 
 
+
+
 function pcolourstart() {
-  let startvalue = document.getElementById("startvalue");
   startvalue.innerHTML = colourstart.value;
 }
 
 function pcolourend() {
-  let endvalue = document.getElementById("endvalue");
   endvalue.innerHTML = colourend.value;
 }
 
