@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
+*{
+  border: 1px solid red;
+}
 body{
   height: 100%;
   width: 50vw;
@@ -16,7 +18,7 @@ body > div, header, footer {
 div, header, footer{
   background-color: #FFF;
   border-radius: 10px;
-  padding: 1%;
+  /* padding: 1%; */
 }
 
 
@@ -59,10 +61,25 @@ textarea{
   text-align: center;
 }
 
-#clipboardcopy{
-  background-color: #F6C503;
+#button{
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+  background-color: #EE6E73;
+  border-radius: 10px;
+  color: #FFF;
+  box-shadow: 6px 6px 10px -4px rgba(128,125,128,1);
   text-transform: uppercase;
   font-weight: bold;
+}
+
+#clipboardcopy{
+  background-color: #EE6E73;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FFF;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px -4px rgba(128,125,128,1);
 }
 
 
