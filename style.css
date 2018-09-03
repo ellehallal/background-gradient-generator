@@ -21,6 +21,9 @@ div, header, footer{
   /* padding: 1%; */
 }
 
+h1, h2{
+  margin: 1.5%;
+}
 
 .container{
   display: flex;
@@ -82,7 +85,10 @@ textarea{
   box-shadow: 6px 6px 10px -4px rgba(128,125,128,1);
 }
 
-
+footer > p{
+  margin: 1%;
+  font-size: 0.8rem;
+}
 .fab {
   color: #000000;
   margin: 0 5%;
