@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 body{
-  height: 100vh;
+  height: 100%;
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -61,5 +61,5 @@ textarea{
 
 .fab {
   color: #000000;
-  margin: 0 .5%;
+  margin: 0 5%;
 }

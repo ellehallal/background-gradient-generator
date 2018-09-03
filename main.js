@@ -3,6 +3,7 @@ const colourstart = document.getElementById("colour-start");
 const colourend = document.getElementById("colour-end");
 let startvalue = document.getElementById("startvalue");
 let endvalue = document.getElementById("endvalue");
+let clipboardcopy = document.getElementById("clipboardcopy")
 
 const ttop = document.getElementById("top");
 const topright = document.getElementById("top-right");
@@ -17,9 +18,15 @@ const topleft = document.getElementById("top-left");
 
 //placeholders / default values
 const button = document.getElementById("button");
+
+//textarea - code to be displayed
 let gradientcode = document.getElementById("gradient-code")
 gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)"
+
+//direction
 let direction = "top";
+
+//// TODO: do i need this variable?
 let usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
 bodybg.style.backgroundImage = usergradient
 
@@ -48,13 +55,20 @@ function topclick(){
 // direction event listeners
 ttop.addEventListener("click", topclick);
 
-// bodybg.style.backgroundImage = usergradient
-// gradientcode = usergradient
 
-
+//button click event listener - copies code to clipboard, background of document obj changes
 button.addEventListener("click", function (){
   usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
+  //body background colour change
   bodybg.style.backgroundImage = usergradient;
+  //textarea
   gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
-  console.log('button clicked')
+  // select and copy to clipboard
+  gradientcode.select()
+  document.execCommand('copy');
+  // code copied to clipboard notification
+  clipboardcopy.innerHTML = "code copied to clipboard";
+  setTimeout(function(){
+    clipboardcopy.innerHTML = "";},
+    4000);
 })
