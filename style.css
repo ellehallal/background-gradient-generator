@@ -27,8 +27,13 @@ div, header, footer{
 }
 
 input[type="color"]{
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+#startvalue, #endvalue{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 img {
@@ -54,10 +59,12 @@ textarea{
   text-align: center;
 }
 
-#startvalue, #endvalue{
-  font-size: 1.2rem;
+#clipboardcopy{
+  background-color: #F6C503;
+  text-transform: uppercase;
   font-weight: bold;
 }
+
 
 .fab {
   color: #000000;
