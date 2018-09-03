@@ -24,10 +24,10 @@ let gradientcode = document.getElementById("gradient-code")
 gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)"
 
 //direction
-let direction = "top";
+let direction = "";
 
 //// TODO: do i need this variable?
-let usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
+let usergradient = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
 bodybg.style.backgroundImage = usergradient
 
 
@@ -58,17 +58,28 @@ ttop.addEventListener("click", topclick);
 
 //button click event listener - copies code to clipboard, background of document obj changes
 button.addEventListener("click", function (){
-  usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
-  //body background colour change
-  bodybg.style.backgroundImage = usergradient;
-  //textarea
-  gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
-  // select and copy to clipboard
-  gradientcode.select()
-  document.execCommand('copy');
-  // code copied to clipboard notification
-  clipboardcopy.innerHTML = "code copied to clipboard";
-  setTimeout(function(){
-    clipboardcopy.innerHTML = "";},
-    4000);
+  if(direction.length === 0){
+    pdirection.classList.add("alert");
+    pdirection.innerHTML = "Please select a direction";
+    setTimeout(function(){
+      pdirection.innerHTML = "";
+      // pdirection.classList.remove("alert");
+    },4000);
+
+  }
+  else{
+    usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
+    //body background colour change
+    bodybg.style.backgroundImage = usergradient;
+    //textarea
+    gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
+    // select and copy to clipboard
+    gradientcode.select()
+    document.execCommand('copy');
+    // code copied to clipboard notification
+    clipboardcopy.innerHTML = "code copied to clipboard";
+    setTimeout(function(){
+      clipboardcopy.innerHTML = "";},
+      4000);
+    }
 })
