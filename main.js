@@ -21,6 +21,7 @@ let gradientcode = document.getElementById("gradient-code")
 gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)"
 let direction = "top";
 let usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
+bodybg.style.backgroundImage = usergradient
 
 
 
@@ -47,5 +48,13 @@ function topclick(){
 // direction event listeners
 ttop.addEventListener("click", topclick);
 
-bodybg.style.backgroundImage = usergradient
+// bodybg.style.backgroundImage = usergradient
 // gradientcode = usergradient
+
+
+button.addEventListener("click", function (){
+  usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
+  bodybg.style.backgroundImage = usergradient;
+  gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
+  console.log('button clicked')
+})
