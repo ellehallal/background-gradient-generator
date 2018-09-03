@@ -63,7 +63,7 @@ button.addEventListener("click", function (){
     pdirection.innerHTML = "Please select a direction";
     setTimeout(function(){
       pdirection.innerHTML = "";
-      // pdirection.classList.remove("alert");
+      pdirection.classList.remove("alert");
     },4000);
 
   }

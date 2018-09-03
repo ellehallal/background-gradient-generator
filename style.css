@@ -75,7 +75,7 @@ textarea{
   font-weight: bold;
 }
 
-#clipboardcopy{
+.alert{
   background-color: #EE6E73;
   text-transform: uppercase;
   font-weight: bold;
