@@ -2,6 +2,9 @@
 /* *{
   border: 1px solid red;
 } */
+html{
+  height: 100%;
+}
 body{
   height: 100%;
   width: 50vw;
@@ -66,7 +69,7 @@ textarea{
 
 #button{
   font-size: 1.2rem;
-  margin-bottom: 1%;
+  margin-bottom: 2vh;
   background-color: #EE6E73;
   border-radius: 10px;
   color: #FFF;

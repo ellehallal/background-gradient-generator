@@ -3,6 +3,7 @@ const colourstart = document.getElementById("colour-start");
 const colourend = document.getElementById("colour-end");
 let startvalue = document.getElementById("startvalue");
 let endvalue = document.getElementById("endvalue");
+let pdirection = document.getElementById("pdirection")
 let clipboardcopy = document.getElementById("clipboardcopy")
 
 const ttop = document.getElementById("top");
@@ -31,29 +32,31 @@ let usergradient = 'linear-gradient(to top, ' + colourstart.value + ', ' + colou
 bodybg.style.backgroundImage = usergradient
 
 
-
+// TODO: remove this? Functions are inside event listeners
 // colour picker functions
-function pcolourstart() {
-  startvalue.innerHTML = colourstart.value.toUpperCase();
-}
-
-function pcolourend() {
-  endvalue.innerHTML = colourend.value.toUpperCase();
-}
+// function pcolourstart() {
+//   startvalue.innerHTML = colourstart.value.toUpperCase();
+// }
+// function pcolourend() {
+//   endvalue.innerHTML = colourend.value.toUpperCase();
+// }
 
 // colour picker event listeners
-colourstart.addEventListener("input", pcolourstart);
-colourend.addEventListener("input", pcolourend);
+colourstart.addEventListener("input", function () {
+  startvalue.innerHTML = colourstart.value.toUpperCase();
+});
 
-function topclick(){
-  let pdirection = document.getElementById("pdirection")
-  pdirection.innerHTML = "Selected gradient direction: to top";
-  direction = "top";
-  console.log(direction)
-}
+colourend.addEventListener("input", function () {
+  endvalue.innerHTML = colourend.value.toUpperCase();
+});
+
 
 // direction event listeners
-ttop.addEventListener("click", topclick);
+ttop.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to top";
+  direction = "top";
+  console.log(direction);
+});
 
 
 //button click event listener - copies code to clipboard, background of document obj changes
