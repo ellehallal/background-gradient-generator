@@ -27,9 +27,7 @@ gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503
 //direction
 let direction = "";
 
-//// TODO: do i need this variable?
-let usergradient = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
-bodybg.style.backgroundImage = usergradient
+bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
 
 
 // TODO: remove this? Functions are inside event listeners
@@ -108,9 +106,8 @@ button.addEventListener("click", function (){
 
   }
   else{
-    usergradient = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
     //body background colour change
-    bodybg.style.backgroundImage = usergradient;
+    bodybg.style.backgroundImage = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
     //textarea
     gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
     // select and copy to clipboard
