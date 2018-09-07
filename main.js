@@ -16,6 +16,7 @@ const left = document.getElementById("left");
 const topleft = document.getElementById("top-left");
 
 const button = document.getElementById("button");
+const resetbutton = document.getElementById("resetbutton");
 
 //textarea - code to be displayed
 let gradientcode = document.getElementById("gradient-code");
@@ -29,13 +30,15 @@ bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + 
 
 
 // colour picker event listeners
-colourstart.addEventListener("input", function () {
-  startvalue.innerHTML = colourstart.value.toUpperCase();
-});
+const coloureventlisteners = () => {
+  colourstart.addEventListener("input", function () {
+    startvalue.innerHTML = colourstart.value.toUpperCase();
+  });
 
-colourend.addEventListener("input", function () {
-  endvalue.innerHTML = colourend.value.toUpperCase();
-});
+  colourend.addEventListener("input", function () {
+    endvalue.innerHTML = colourend.value.toUpperCase();
+  });
+}
 
 
 // direction event listeners
@@ -80,7 +83,16 @@ topleft.addEventListener("click", function () {
 });
 
 
-
+// reset button event listener
+resetbutton.addEventListener("click", function () {
+  direction = "";
+  pdirection.innerHTML = "";
+  colourstart.value = "#EE6E73";
+  colourstart.end = "#F6C503";
+  coloureventlisteners();
+  bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
+  gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
+});
 
 
 //button click event listener - copies code to clipboard, background of document obj changes
