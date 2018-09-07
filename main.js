@@ -30,15 +30,15 @@ bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + 
 
 
 // colour picker event listeners
-const coloureventlisteners = () => {
-  colourstart.addEventListener("input", function () {
-    startvalue.innerHTML = colourstart.value.toUpperCase();
-  });
 
-  colourend.addEventListener("input", function () {
-    endvalue.innerHTML = colourend.value.toUpperCase();
-  });
-}
+colourstart.addEventListener("input", function () {
+  startvalue.innerHTML = colourstart.value.toUpperCase();
+});
+
+colourend.addEventListener("input", function () {
+  endvalue.innerHTML = colourend.value.toUpperCase();
+});
+
 
 
 // direction event listeners
@@ -84,15 +84,15 @@ topleft.addEventListener("click", function () {
 
 
 // reset button event listener
-resetbutton.addEventListener("click", function () {
-  direction = "";
-  pdirection.innerHTML = "";
-  colourstart.value = "#EE6E73";
-  colourstart.end = "#F6C503";
-  coloureventlisteners();
-  bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
-  gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
-});
+// resetbutton.addEventListener("click", function () {
+//   direction = "";
+//   pdirection.innerHTML = "";
+//   colourstart.value = "#EE6E73";
+//   colourstart.end = "#F6C503";
+//   // coloureventlisteners();
+//   bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
+//   gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
+// });
 
 
 //button click event listener - copies code to clipboard, background of document obj changes
