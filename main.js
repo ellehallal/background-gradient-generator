@@ -62,6 +62,20 @@ topright.addEventListener("click", function () {
   direction = "top right";
 });
 
+right.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: bottom right";
+  direction = "bottom right";
+});
+
+bottomright.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to right";
+  direction = "right";
+});
+
+
+
+
+
 //button click event listener - copies code to clipboard, background of document obj changes
 button.addEventListener("click", function (){
   if(direction.length === 0){
