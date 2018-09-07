@@ -55,7 +55,6 @@ colourend.addEventListener("input", function () {
 ttop.addEventListener("click", function () {
   pdirection.innerHTML = "Selected gradient direction: to top";
   direction = "top";
-  console.log(direction);
 });
 
 
@@ -84,5 +83,7 @@ button.addEventListener("click", function (){
     setTimeout(function(){
       clipboardcopy.innerHTML = "";},
       4000);
+    direction = "";
+    pdirection.innerHTML = ""
     }
 })
