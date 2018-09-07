@@ -90,9 +90,14 @@ textarea{
 
 footer > p{
   margin: 1%;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .fab {
   color: #000000;
-  margin: 0 5%;
+  margin: 0 2%;
+}
+
+.fab:hover {
+  color: #EE6E73;
+  margin: 0 2%;
 }
