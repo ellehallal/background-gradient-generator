@@ -63,13 +63,33 @@ topright.addEventListener("click", function () {
 });
 
 right.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: bottom right";
-  direction = "bottom right";
+  pdirection.innerHTML = "Selected gradient direction: right";
+  direction = "right";
 });
 
 bottomright.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to right";
-  direction = "right";
+  pdirection.innerHTML = "Selected gradient direction: to bottom right";
+  direction = "bottom right";
+});
+
+bottom.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to bottom";
+  direction = "bottom";
+});
+
+bottomleft.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to bottom left";
+  direction = "bottom left";
+});
+
+left.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to left";
+  direction = "left";
+});
+
+topleft.addEventListener("click", function () {
+  pdirection.innerHTML = "Selected gradient direction: to top left";
+  direction = "top left";
 });
 
 
@@ -84,7 +104,7 @@ button.addEventListener("click", function (){
     setTimeout(function(){
       pdirection.innerHTML = "";
       pdirection.classList.remove("alert");
-    },4000);
+    },2000);
 
   }
   else{
