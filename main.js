@@ -84,15 +84,16 @@ topleft.addEventListener("click", function () {
 
 
 // reset button event listener
-// resetbutton.addEventListener("click", function () {
-//   direction = "";
-//   pdirection.innerHTML = "";
-//   colourstart.value = "#EE6E73";
-//   colourstart.end = "#F6C503";
-//   // coloureventlisteners();
-//   bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
-//   gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
-// });
+resetbutton.addEventListener("click", function () {
+  direction = "";
+  pdirection.innerHTML = "";
+  colourstart.value = "#EE6E73";
+  colourend.value = "#F6C503";
+  startvalue.innerHTML = colourstart.value.toUpperCase();
+  endvalue.innerHTML = colourend.value.toUpperCase();
+  bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
+  gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
+});
 
 
 //button click event listener - copies code to clipboard, background of document obj changes
