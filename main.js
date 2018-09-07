@@ -104,7 +104,7 @@ button.addEventListener("click", function (){
     setTimeout(function(){
       pdirection.innerHTML = "";
       pdirection.classList.remove("alert");
-    },2000);
+    },1000);
 
   }
   else{
