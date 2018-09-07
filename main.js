@@ -30,15 +30,6 @@ let direction = "";
 bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
 
 
-// TODO: remove this? Functions are inside event listeners
-// colour picker functions
-// function pcolourstart() {
-//   startvalue.innerHTML = colourstart.value.toUpperCase();
-// }
-// function pcolourend() {
-//   endvalue.innerHTML = colourend.value.toUpperCase();
-// }
-
 // colour picker event listeners
 colourstart.addEventListener("input", function () {
   startvalue.innerHTML = colourstart.value.toUpperCase();
