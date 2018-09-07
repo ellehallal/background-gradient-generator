@@ -3,8 +3,8 @@ const colourstart = document.getElementById("colour-start");
 const colourend = document.getElementById("colour-end");
 let startvalue = document.getElementById("startvalue");
 let endvalue = document.getElementById("endvalue");
-let pdirection = document.getElementById("pdirection")
-let clipboardcopy = document.getElementById("clipboardcopy")
+let pdirection = document.getElementById("pdirection");
+let clipboardcopy = document.getElementById("clipboardcopy");
 
 const ttop = document.getElementById("top");
 const topright = document.getElementById("top-right");
@@ -15,18 +15,16 @@ const bottomleft = document.getElementById("bottom-left");
 const left = document.getElementById("left");
 const topleft = document.getElementById("top-left");
 
-
-
-//placeholders / default values
 const button = document.getElementById("button");
 
 //textarea - code to be displayed
-let gradientcode = document.getElementById("gradient-code")
-gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)"
+let gradientcode = document.getElementById("gradient-code");
+gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503)";
 
 //direction
 let direction = "";
 
+//body background gradient
 bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
 
 
@@ -100,9 +98,9 @@ button.addEventListener("click", function (){
     //body background colour change
     bodybg.style.backgroundImage = 'linear-gradient(to ' + direction + ', ' + colourstart.value + ', ' + colourend.value + ')';
     //textarea
-    gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')'
+    gradientcode.value = 'background-image: linear-gradient(to ' + direction + ', ' + colourstart.value.toUpperCase() + ', ' + colourend.value.toUpperCase() + ')';
     // select and copy to clipboard
-    gradientcode.select()
+    gradientcode.select();
     document.execCommand('copy');
     // code copied to clipboard notification
     clipboardcopy.innerHTML = "code copied to clipboard";
@@ -110,6 +108,6 @@ button.addEventListener("click", function (){
       clipboardcopy.innerHTML = "";},
       4000);
     direction = "";
-    pdirection.innerHTML = ""
+    pdirection.innerHTML = "";
     }
-})
+});
