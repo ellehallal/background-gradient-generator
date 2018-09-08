@@ -4,12 +4,12 @@
 } */
 html{
   height: 100%;
-}
-body{
-  height: 100%;
-  width: 50vw;
   display: flex;
   flex-direction: column;
+}
+body{
+  width: 50vw;
+  align-self: center;
   font-family: 'Lato', sans-serif;
   text-align: center;
 }
@@ -58,6 +58,17 @@ img:hover{
   background-color: #EE6E73;
 }
 
+#button, #resetbutton{
+  font-size: 1.2rem;
+  margin: 2%;
+  background-color: #EE6E73;
+  border-radius: 10px;
+  color: #FFF;
+  box-shadow: 6px 6px 10px -4px rgba(128,125,128,1);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 textarea{
   box-sizing: border-box;
   border-radius: 10px;
@@ -65,18 +76,7 @@ textarea{
   height: auto;
   font-size: inherit;
   text-align: center;
-}
-
-#button, #resetbutton{
-  font-size: 1.2rem;
-  margin: 2vh;
-  background-color: #EE6E73;
-  border-radius: 10px;
-  color: #FFF;
-  box-shadow: 6px 6px 10px -4px rgba(128,125,128,1);
-  text-transform: uppercase;
-  font-weight: bold;
-
+  margin: 2%;
 }
 
 .alert{
@@ -95,7 +95,7 @@ footer > p{
 }
 .fab {
   color: #000000;
-  margin: 0 2%;
+  margin: 1%;
 }
 
 .fab:hover {

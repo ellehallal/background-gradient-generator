@@ -42,43 +42,49 @@ colourend.addEventListener("input", function () {
 
 // direction event listeners
 ttop.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to top";
   direction = "top";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
 });
 
 topright.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to top right";
   direction = "top right";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 right.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: right";
   direction = "right";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 bottomright.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to bottom right";
   direction = "bottom right";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 bottom.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to bottom";
   direction = "bottom";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 bottomleft.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to bottom left";
   direction = "bottom left";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 left.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to left";
   direction = "left";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
+
 });
 
 topleft.addEventListener("click", function () {
-  pdirection.innerHTML = "Selected gradient direction: to top left";
   direction = "top left";
+  pdirection.innerHTML = "Gradient direction: to " + direction;
 });
 
 
@@ -95,7 +101,7 @@ resetbutton.addEventListener("click", function () {
 });
 
 
-//button click event listener - copies code to clipboard, background of document obj changes
+//button click event listener - copies code to clipboard, background of body changes
 button.addEventListener("click", function (){
   if(direction.length === 0){
     pdirection.classList.add("alert");
