@@ -62,7 +62,7 @@ textarea{
   box-sizing: border-box;
   border-radius: 10px;
   width: 85%;
-  height: 100%;
+  height: auto;
   font-size: inherit;
   text-align: center;
 }
