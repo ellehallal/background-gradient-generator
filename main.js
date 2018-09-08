@@ -30,7 +30,6 @@ bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + 
 
 
 // colour picker event listeners
-
 colourstart.addEventListener("input", function () {
   startvalue.innerHTML = colourstart.value.toUpperCase();
 });
