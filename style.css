@@ -59,6 +59,10 @@ img:hover{
   background-color: #EE6E73;
 }
 
+#pdirection{
+  font-size: 1.2rem;
+}
+
 #button, #resetbutton{
   font-size: 1.2rem;
   margin: 2%;
