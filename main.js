@@ -25,9 +25,6 @@ gradientcode.value = "background-image: linear-gradient(to top, #EE6E73, #F6C503
 //direction
 let direction = "";
 
-//body background gradient
-bodybg.style.backgroundImage = 'linear-gradient(to top, ' + colourstart.value + ', ' + colourend.value + ')';
-
 
 // colour picker event listeners
 colourstart.addEventListener("input", function () {

@@ -12,6 +12,7 @@ body{
   align-self: center;
   font-family: 'Lato', sans-serif;
   text-align: center;
+  background-image: linear-gradient(to top, #EE6E73, #F6C503);
 }
 
 body > div, header, footer {
